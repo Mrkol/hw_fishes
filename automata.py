@@ -20,6 +20,7 @@ class CellularAutomata:
                 w = len(self.field[0])
                 #Everything in this chain of transformations is basically
                 #an iterator, therefore it's not as inefficient as it looks.
+                #(still slow as hell)
                 area = islice(cycle(self.field), h + j - 1, h + j + 2)
                 area = (islice(cycle(row), w + i - 1, w + i + 2) for row in area)
                 area = chain.from_iterable(area)

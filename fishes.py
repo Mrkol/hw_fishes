@@ -47,3 +47,12 @@ automata.ReadRules(rules)
 automata.ReadState(input)
 automata.FastForward(steps)
 automata.WriteState(output)
+
+if args.file:
+	input.close()
+
+if args.output:
+	output.close()
+
+if args.rules:
+	rules.close()
