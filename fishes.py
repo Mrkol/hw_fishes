@@ -1,5 +1,6 @@
-import CellularAutomata
+import automata
 import argparse
+import sys
 
 parser = argparse.ArgumentParser()
 
@@ -40,9 +41,9 @@ if args.steps:
 	steps = args.steps
 
 
-automata = CellularAutomata()
+automata = automata.CellularAutomata()
 
 automata.ReadRules(rules)
-automata.ReadState(file)
+automata.ReadState(input)
 automata.FastForward(steps)
 automata.WriteState(output)
