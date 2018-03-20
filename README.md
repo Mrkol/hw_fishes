@@ -11,4 +11,4 @@ This will replace all _s that have no neighboring 0s with a #.
 
 States are saved exactly like one would expect.
 
-Standard ruleset uses ~ for fishes, ; for crayfishes, . for blanks and # for rocks.
+Standard ruleset uses F for fishes, C for crayfishes, . for blanks and # for rocks.
