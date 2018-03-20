@@ -12,7 +12,7 @@ class CellularAutomata:
         self.field = []
         self.rules = []
 
-    def Step(self):
+    def step(self):
         newfield = deepcopy(self.field)
         for j in range(0, len(self.field)):
             for i in range(0, len(self.field[j])):
@@ -38,11 +38,11 @@ class CellularAutomata:
 
         self.field = newfield
 
-    def FastForward(self, n):
+    def fast_forward(self, n):
         for i in range(0, n):
-            self.Step()
+            self.step()
 
-    def ReadRules(self, textstream):
+    def read_rules(self, textstream):
         self.rules = []
         for line in textstream:
             line = line.strip()
@@ -51,14 +51,14 @@ class CellularAutomata:
         if DEBUG:
             print(self.rules)
 
-    def ReadState(self, textstream):
+    def read_state(self, textstream):
         self.field = []
         for line in textstream:
             self.field += [[]]
             for symbol in line.strip():
                 self.field[-1] += symbol
 
-    def WriteState(self, textstream):
+    def write_state(self, textstream):
         textstream.write(str(self))
     
     def __str__(self):
